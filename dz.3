@@ -1,0 +1,32 @@
+#pragma once
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+#include <math.h>
+
+using namespace std;
+void randm(int** mas, int n) {
+	double m = 1;
+	
+	srand(time(0));
+	for (int i = 0; i < n; i++) {//str
+		for (int j = 0; j < n; j++) {//kol
+			mas[i][j] = rand() % 31;
+			cout << setw(4) << mas[i][j];
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < n; i++) {
+		
+		m *= double(mas[i][ i]);
+			
+		
+	}
+	for (int i = 1; i < n; i++) {
+		 m = sqrt(m);
+
+
+	}
+	
+	cout << endl << m;
+}
